@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <base href="/">
+  <title>Why Choose Xpatnest - European Education Consultants</title>
+  <meta name="description" content="Discover what makes Xpatnest the preferred overseas education consultant for European destinations. Learn about our 5 years of experience and 1,000+ success stories.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .service-intro {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 50px auto;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #27506f;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    .timeline-container {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+
+    .timeline-container::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -13px;
+      background-color: white;
+      border: 4px solid #27506f;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .left {
+      left: 0;
+    }
+
+    .right {
+      left: 50%;
+    }
+
+    .left::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      right: 30px;
+      border: medium solid #f8f8f8;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent #f8f8f8;
+    }
+
+    .right::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid #f8f8f8;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent #f8f8f8 transparent transparent;
+    }
+
+    .right::after {
+      left: -12px;
+    }
+
+    .timeline-content {
+      padding: 20px 30px;
+      background-color: #f8f8f8;
+      position: relative;
+      border-radius: 6px;
+    }
+
+    .timeline-content h3 {
+      margin-top: 0;
+      color: #27506f;
+    }
+
+    .timeline-date {
+      font-weight: bold;
+      color: #27506f;
+      margin-bottom: 5px;
+    }
+
+    .team-members {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .team-member {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+
+    .team-member img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .team-member-info {
+      padding: 20px;
+    }
+
+    .team-member-info h3 {
+      margin-top: 0;
+      margin-bottom: 5px;
+      font-size: 20px;
+    }
+
+    .team-member-info p {
+      margin-bottom: 15px;
+      color: #666;
+    }
+
+    .team-member-social {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .team-member-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: #27506f;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .team-member-social a:hover {
+      background-color: #61b1bc;
+    }
+
+    .awards-section {
+      background-color: #f8f8f8;
+      border-radius: 8px;
+      padding: 30px;
+      margin-top: 40px;
+    }
+
+    .awards-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+    }
+
+    .awards-list li {
+      padding: 10px 0 10px 30px;
+      position: relative;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .awards-list li:last-child {
+      border-bottom: none;
+    }
+
+    .awards-list li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #61b1bc;
+      font-weight: bold;
+    }
+
+    .mission-section {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin: 50px 0;
+    }
+
+    .mission-content {
+      flex: 1;
+    }
+
+    .mission-image {
+      flex: 1;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .mission-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .mission-image::before {
+      content: "";
+      background: url('https://ext.same-assets.com/2086043709/3473015872.png');
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 150px;
+      height: 150px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: -1;
+      opacity: 0.5;
+    }
+
+    .section-title {
+      position: relative;
+      padding-bottom: 15px;
+      margin-bottom: 30px;
+    }
+
+    .section-title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      height: 3px;
+      background-color: #61b1bc;
+    }
+
+    .journey-intro {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .timeline::after {
+        left: 31px;
+      }
+
+      .timeline-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+
+      .timeline-container::before {
+        left: 60px;
+        border: medium solid #f8f8f8;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #f8f8f8 transparent transparent;
+      }
+
+      .left::after, .right::after {
+        left: 18px;
+      }
+
+      .right {
+        left: 0%;
+      }
+
+      .mission-section {
+        flex-direction: column;
+      }
+
+      .mission-image {
+        order: -1;
+      }
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/main-BzFaGI6z.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-BVwBI64g.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="logo">
+        <a href="/" aria-label="Xpatnest Consultancy Home">
+          <img src="uploads/logo_export.svg?v=2" alt="Xpatnest Consultancy Logo" width="150" height="47">
+        </a>
+      </div>
+      <nav class="main-nav" role="navigation">
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/why-xpatnest.html" class="active">WHY XPATNEST</a></li>
+          <li><a href="/our-services.html">OUR SERVICES</a></li>
+          <li><a href="/get-in-touch.html">GET IN TOUCH</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Why Choose Xpatnest</h1>
+      <p>Your journey to study abroad deserves guidance from the best in the industry</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="page-content">
+    <div class="container">
+      <!-- Introduction -->
+      <div class="service-intro">
+        <p>Since 2019, Xpatnest has guided over 1,000 students to conquer their dreams. Having a visa success rate of over 99% demonstrates our expertise in the field. With so much information available online today, you need someone with real-world experience of sending students to Europe to validate your choices and guide you in the best direction.</p>
+      </div>
+
+      <!-- Mission Section -->
+      <div class="mission-section">
+        <div class="mission-content">
+          <h2 class="section-title">Our Mission</h2>
+          <p>Provide intellectual opinion on anything related to studying abroad with utmost empathy; thereby enabling students, parents and all stakeholders to arrive at a higher level of clarity of thought, validate their hypotheses and make informed decisions.</p>
+          <p>At Xpatnest, we believe that every student deserves access to quality education, and we are committed to making the process of studying abroad transparent, straightforward, and successful for everyone who trusts us with their future.</p>
+        </div>
+        <div class="mission-image">
+          <img src="https://ext.same-assets.com/3085376555/3886762187.jpeg" alt="Xpatnest Consultancy Team">
+        </div>
+      </div>
+
+      <!-- Awards Section -->
+      <div class="awards-section">
+        <h2 class="section-title">Achievements, Recognition & Awards</h2>
+        <h3>Our Bragging Rights</h3>
+        <ul class="awards-list">
+          <li>120+ Top University Partnerships</li>
+          <li>Several UK Top 10 & all Irish Universities Work With Us</li>
+          <li>Pan India Offices in 9 Key Cities & Counting</li>
+          <li>200+ Team Members & Growing</li>
+          <li>40,000+ Dreams Conquered</li>
+          <li>Member of the British Council & UCAS Accredited</li>
+          <li>Education in Ireland authorized Partner</li>
+          <li>99% Ireland Student Visa Success Rate</li>
+          <li>Awarded the "Best Agent of the Year" 4 years in a row by Enterprise Ireland, the Govt. body of Ireland</li>
+        </ul>
+      </div>
+
+      <!-- Team Members -->
+      <div class="team-section">
+        <h2 class="section-title">Leaders Who Truly Care</h2>
+        <p>Our leadership team consists of professionals who understand that their opinions have a lifelong impact on students' lives. They approach every case with care, empathy, and deep expertise.</p>
+
+        <div class="team-members">
+          <div class="team-member">
+            <img src="https://ext.same-assets.com/3085376555/3886762187.jpeg" alt="Rajiv Sharma">
+            <div class="team-member-info">
+              <h3>Rajiv Sharma</h3>
+              <p>An alumnus of IIM-Calcutta, a former investment banker, Rajiv has been at the forefront of the study abroad industry for about two decades. He is credited with building the Ireland market in India.</p>
+              <div class="team-member-social">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-member">
+            <img src="https://ext.same-assets.com/3902755379/1131862582.jpeg" alt="Anjali Patel">
+            <div class="team-member-info">
+              <h3>Anjali Patel</h3>
+              <p>Co-founded Xpatnest almost 2 decades ago and built the company from a 2-member team to over 200 members. She is an expert in IELTS training, interior designer by qualification, and a proud mom with a never-say-die attitude.</p>
+              <div class="team-member-social">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-member">
+            <img src="https://ext.same-assets.com/2714813312/1531042068.png" alt="Priya Gupta">
+            <div class="team-member-info">
+              <h3>Priya Gupta</h3>
+              <p>IELTS/PTE/Cambridge ESOL Trainer with 20+ years standing. She has helped thousands of students achieve their target scores in language exams.</p>
+              <div class="team-member-social">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-member">
+            <img src="https://ext.same-assets.com/3917258903/952392651.png" alt="Arjun Kapoor">
+            <div class="team-member-info">
+              <h3>Arjun Kapoor</h3>
+              <p>19+ Years in Study Abroad Consulting, MBA in HR and Marketing. His expertise lies in matching students with the perfect university program.</p>
+              <div class="team-member-social">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Our Journey -->
+      <div class="journey-section">
+        <h2 class="section-title journey-intro">Our Journey</h2>
+        <div class="timeline">
+          <div class="timeline-container left">
+            <div class="timeline-content">
+              <div class="timeline-date">May 2004</div>
+              <h3>Eureka Moment</h3>
+              <p>Started our journey as an IELTS training institute with 2 offices. This was the year with a lot of learning and finding our footing in the market.</p>
+            </div>
+          </div>
+          <div class="timeline-container right">
+            <div class="timeline-content">
+              <div class="timeline-date">Feb 2005</div>
+              <h3>Rapid Growth</h3>
+              <p>Opened our third IELTS training office in Noida. This was a period of strategic expansion and building our presence in key educational hubs.</p>
+            </div>
+          </div>
+          <div class="timeline-container left">
+            <div class="timeline-content">
+              <div class="timeline-date">April 2006</div>
+              <h3>Beginning of an Era</h3>
+              <p>We realized that there was an opportunity to build a market for higher education in Ireland. It had all the perfect conditions for Indian students to study, build their careers and live a peaceful life with a higher standard of living.</p>
+            </div>
+          </div>
+          <div class="timeline-container right">
+            <div class="timeline-content">
+              <div class="timeline-date">April 2007</div>
+              <h3>Baby Steps Into The UK</h3>
+              <p>UK was an established market with hundreds of study abroad consultants. Defying all odds, we still took that plunge to make it big in the UK.</p>
+            </div>
+          </div>
+          <div class="timeline-container left">
+            <div class="timeline-content">
+              <div class="timeline-date">Nov 2010</div>
+              <h3>Feather In The Cap</h3>
+              <p>Award of Excellence by University of Cambridge ESOL Examinations. This award signified the quality of work which we did in the IELTS space.</p>
+            </div>
+          </div>
+          <div class="timeline-container right">
+            <div class="timeline-content">
+              <div class="timeline-date">Nov 2016</div>
+              <h3>The Award Saga Begins</h3>
+              <p>Awarded the "Best Agent of the Year" by Enterprise Ireland, the Government body of Ireland; a herculean feat that no other consultant in India had achieved ever.</p>
+            </div>
+          </div>
+          <div class="timeline-container left">
+            <div class="timeline-content">
+              <div class="timeline-date">Nov 2019</div>
+              <h3>Market Leaders</h3>
+              <p>We secured the lion's share of the market. 1 in 3 students going to Ireland from India for education, went through our guidance.</p>
+            </div>
+          </div>
+          <div class="timeline-container right">
+            <div class="timeline-content">
+              <div class="timeline-date">2021-Present</div>
+              <h3>Expansion Across India</h3>
+              <p>With offices in Delhi, Mumbai, Bangalore, Chennai, Hyderabad, Kolkata, Pune, Ahmedabad, and Chandigarh, we continue to expand our reach and help students achieve their study abroad dreams.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="cta-section">
+        <h2>Ready to Begin Your Overseas Education Journey?</h2>
+        <p>Get in touch with our expert counselors to discuss your options for studying in the UK and Ireland.</p>
+        <a href="/get-in-touch.html" class="btn btn-primary">Contact Us Today</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <img src="uploads/logo_export.svg?v=2" alt="Xpatnest Consultancy Logo" class="footer-logo" width="150" height="47">
+          <p>Xpatnest Consultancy provides specialized education consulting services for students aspiring to study in Europe. With over 5 years of experience, we have helped over 1,000 students achieve their study abroad dreams.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/why-xpatnest.html">Why Xpatnest</a></li>
+            <li><a href="/our-services.html">Our Services</a></li>
+            <li><a href="/get-in-touch.html">Get In Touch</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <address>
+            123 Example Street<br>
+            New Delhi, 110001<br>
+            India
+          </address>
+          <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+          <p><a href="mailto:info@xpatnestconsultancy.com">info@xpatnestconsultancy.com</a></p>
+        </div>
+        <div class="footer-social">
+          <h3>Connect With Us</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Xpatnest Consultancy Pvt. Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <base href="/">
+  <title>Our Services - Xpatnest Consultancy</title>
+  <meta name="description" content="Explore the comprehensive services offered by Xpatnest Consultancy, from university selection to visa processing and pre-departure guidance for Europe education.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .service-intro {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    .main-service {
+      display: flex;
+      align-items: center;
+      background-color: #f8f8f8;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 60px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .main-service-content {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .main-service-content h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      color: #27506f;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    .main-service-content h2::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background-color: #61b1bc;
+    }
+
+    .main-service-content p {
+      margin-bottom: 25px;
+      line-height: 1.8;
+    }
+
+    .main-service-image {
+      flex: 1;
+      min-height: 400px;
+      background-image: url('https://ext.same-assets.com/3662247000/3661736313.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .other-services-title {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #27506f;
+      position: relative;
+    }
+
+    .other-services-title::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background-color: #61b1bc;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .service-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-image {
+      height: 250px;
+      overflow: hidden;
+    }
+
+    .service-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .service-card:hover .service-image img {
+      transform: scale(1.05);
+    }
+
+    .service-content {
+      padding: 25px;
+      background-color: #fff;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-content h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      color: #27506f;
+    }
+
+    .service-content p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+
+    .service-btn {
+      align-self: flex-start;
+      padding: 10px 20px;
+      background-color: #27506f;
+      color: white;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      font-weight: 500;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .service-btn:hover {
+      background-color: #1c3e5a;
+      color: white;
+    }
+
+    .bg-pattern {
+      position: absolute;
+      z-index: -1;
+      opacity: 0.1;
+    }
+
+    .pattern-1 {
+      top: 100px;
+      left: -100px;
+      width: 200px;
+      height: 200px;
+      background: url('https://ext.same-assets.com/2086043709/3473015872.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .pattern-2 {
+      bottom: 50px;
+      right: -50px;
+      width: 150px;
+      height: 150px;
+      background: url('https://ext.same-assets.com/2086043709/3473015872.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    @media (max-width: 992px) {
+      .main-service {
+        flex-direction: column;
+      }
+
+      .main-service-image {
+        width: 100%;
+        min-height: 300px;
+        order: -1;
+      }
+
+      .main-service-content {
+        padding: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-intro {
+        padding: 0 20px;
+      }
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/main-BzFaGI6z.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-BVwBI64g.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="logo">
+        <a href="/" aria-label="Xpatnest Consultancy Home">
+          <img src="uploads/logo_export.svg?v=2" alt="Xpatnest Consultancy Logo" width="150" height="47">
+        </a>
+      </div>
+      <nav class="main-nav" role="navigation">
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/why-xpatnest.html">WHY XPATNEST</a></li>
+          <li><a href="/our-services.html" class="active">OUR SERVICES</a></li>
+          <li><a href="/get-in-touch.html">GET IN TOUCH</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Our Services</h1>
+      <p>Comprehensive support for your overseas education journey</p>
+    </div>
+  </section>
+
+  <!-- Background Patterns -->
+  <div class="bg-pattern pattern-1"></div>
+  <div class="bg-pattern pattern-2"></div>
+
+  <!-- Main Content -->
+  <section class="page-content">
+    <div class="container">
+      <!-- Introduction -->
+      <div class="service-intro">
+        <p>Since 2019, students like you have trusted us with their educational decisions in Europe. Starting with the university and the best course for you, we go that extra mile to make sure your journey is seamless; including your application, visa, forex, ticketing, dos and don'ts, accommodation, post-landing formalities and more. Over 1,000 dreams conquered and counting.</p>
+      </div>
+
+      <!-- Main Service Section -->
+      <div class="main-service">
+        <div class="main-service-content">
+          <h2>Study in Europe Counselling</h2>
+          <p>Choosing to study abroad is a once in a lifetime decision for many, and you need to consult with someone who truly cares. While there may be hundreds of universities, what matters to you is that one university and a course that is the best for you.</p>
+          <p>You need to think long-term, envision the future and make an informed decision. Our expert counselors will guide you through every step, helping you select the right university and program that aligns with your career goals and personal aspirations.</p>
+          <a href="/get-in-touch.html" class="btn btn-primary">Get Expert Advice</a>
+        </div>
+        <div class="main-service-image"></div>
+      </div>
+
+      <!-- Other Services Section -->
+      <h2 class="other-services-title">Other Services</h2>
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://ext.same-assets.com/4076536514/3812693272.jpeg" alt="Genuine Guidance">
+          </div>
+          <div class="service-content">
+            <h3>Genuine Guidance</h3>
+            <p>Our team is led by seasoned professionals with prestigious academic backgrounds, ensuring you receive guidance from some of the finest experts in the field. We prioritize your needs and focus on finding the perfect academic match for your future.</p>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://ext.same-assets.com/1543258906/3015297233.jpeg" alt="Application Processing">
+          </div>
+          <div class="service-content">
+            <h3>Application Processing</h3>
+            <p>Having been in the industry for almost two decades, we know the nuances of filling applications with universities. Our expert team will help you prepare compelling documents, personal statements, and ensure all requirements are met for a successful application.</p>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://ext.same-assets.com/3249371240/288020987.jpeg" alt="Financial Guidance">
+          </div>
+          <div class="service-content">
+            <h3>Financial Guidance</h3>
+            <p>Get your financial documents in order (crucial for the visa), arrange education loans and forex, through experts with 10+ years of experience. We'll help you understand the costs involved and plan your finances effectively for your study abroad journey.</p>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://ext.same-assets.com/2812741604/2170154573.jpeg" alt="Visa Processing">
+          </div>
+          <div class="service-content">
+            <h3>Visa Processing</h3>
+            <p>With a 99% visa success rate and having received multiple industry awards, you can trust that your visa documentation is in safe hands. Our meticulous approach ensures that your visa application meets all requirements for a smooth approval process.</p>
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://ext.same-assets.com/1112737334/352928403.jpeg" alt="Pre-Departure Counselling">
+          </div>
+          <div class="service-content">
+            <h3>Pre-Departure Counselling</h3>
+            <p>Traveling abroad alone for studies can be overwhelming. However, when you are given the right guidance and have a network of friends, it will be fun. We provide comprehensive pre-departure sessions covering everything you need to know before leaving.</p>
+          </div>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://ext.same-assets.com/1051025699/164559114.jpeg" alt="Post-Landing Support">
+          </div>
+          <div class="service-content">
+            <h3>Post-Landing Support</h3>
+            <p>Whether it's navigating immigration services like UKBA or Garda in Ireland, or finding suitable accommodation, we ensure you know exactly what to do and how to do it. Our support continues even after you've landed in your study destination.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Process Section -->
+      <div class="process-section">
+        <h2>Our Process</h2>
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Initial Consultation</h3>
+            <p>We begin with a thorough assessment of your academic background, career aspirations, and personal preferences</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>University &amp; Course Selection</h3>
+            <p>We help you choose the right universities and courses that match your profile and future goals</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Application Preparation</h3>
+            <p>Our experts assist with preparing compelling applications to maximize your chances of acceptance</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>Visa Guidance</h3>
+            <p>We provide comprehensive support for your student visa application process</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">5</div>
+            <h3>Pre-Departure & Beyond</h3>
+            <p>From travel arrangements to post-landing support, we're with you every step of the way</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="cta-section">
+        <h2>Ready to Begin Your Overseas Education Journey?</h2>
+        <p>Get in touch with our expert counselors to discuss your options for studying in Europe. We're here to make your dreams of studying abroad a reality.</p>
+        <a href="/get-in-touch.html" class="btn btn-primary">Contact Us Today</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <img src="uploads/logo_export.svg?v=2" alt="Xpatnest Consultancy Logo" class="footer-logo" width="150" height="47">
+          <p>Xpatnest Consultancy provides specialized education consulting services for students aspiring to study in Europe. With over 5 years of experience, we have helped over 1,000 students achieve their study abroad dreams.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/why-xpatnest.html">Why Xpatnest</a></li>
+            <li><a href="/our-services.html">Our Services</a></li>
+            <li><a href="/get-in-touch.html">Get In Touch</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <address>
+            123 Example Street<br>
+            New Delhi, 110001<br>
+            India
+          </address>
+          <p><a href="tel:+919876543210">+91&nbsp;98765&nbsp;43210</a></p>
+          <p><a href="mailto:info@xpatnestconsultancy.com">info@xpatnestconsultancy.com</a></p>
+        </div>
+        <div class="footer-social">
+          <h3>Connect With Us</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Xpatnest Consultancy Pvt. Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

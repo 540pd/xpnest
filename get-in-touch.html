@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#27506f">
+  <base href="/">
+  <title>Get In Touch - Xpatnest Consultancy</title>
+  <meta name="description" content="Contact Xpatnest Consultancy for expert guidance on studying in the UK and Ireland. Our team of counselors is ready to help you with university selection, visa processing, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Fix for iOS scroll behavior */
+    html {
+      -webkit-overflow-scrolling: touch;
+    }
+    /* Fix for touch highlight on mobile */
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+    /* Contact page specific styles */
+    .contact-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .contact-option {
+      background-color: #f8f8f8;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-option:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact-option-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      color: white;
+      margin-bottom: 20px;
+      font-size: 26px;
+    }
+
+    .contact-option h3 {
+      margin-bottom: 15px;
+    }
+
+    .contact-option p {
+      margin-bottom: 20px;
+      color: #666;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background-color: var(--secondary-color);
+    }
+
+    .contact-number {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--primary-color);
+      display: block;
+      margin: 15px 0;
+    }
+
+    /* Office locations section */
+    .offices-heading {
+      text-align: center;
+      margin: 50px 0 30px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    .offices-heading::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background-color: var(--secondary-color);
+    }
+
+    .location-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .location-tab {
+      padding: 10px 20px;
+      background-color: #f1f1f1;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .location-tab.active,
+    .location-tab:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    .location-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      background-color: #f8f8f8;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 40px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .location-info {
+      padding: 30px;
+    }
+
+    .location-info h3 {
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+
+    .location-info address {
+      margin-bottom: 20px;
+      font-style: normal;
+      line-height: 1.8;
+    }
+
+    .location-info .contact-details {
+      margin-bottom: 20px;
+    }
+
+    .location-info .contact-details h4 {
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+
+    .location-image {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .location-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .map-container {
+      margin-top: 30px;
+      height: 400px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .location-content {
+        grid-template-columns: 1fr;
+      }
+
+      .location-image {
+        height: 250px;
+      }
+
+      .contact-form {
+        margin-bottom: 40px;
+      }
+
+      .contact-options {
+        grid-template-columns: 1fr;
+      }
+
+      .map-container {
+        height: 300px;
+      }
+
+      .location-tabs {
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 10px;
+      }
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/main-BzFaGI6z.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-BVwBI64g.css">
+</head>
+<body>
+  <!-- Skip to content for accessibility -->
+  <a href="#main-content" class="sr-only">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="container">
+      <div class="logo">
+        <a href="/" aria-label="Xpatnest Consultancy Home">
+          <img src="uploads/logo_export.svg?v=2" alt="Xpatnest Consultancy Logo" width="150" height="47">
+        </a>
+      </div>
+      <nav class="main-nav" role="navigation">
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li><a href="/why-xpatnest.html">WHY XPATNEST</a></li>
+          <li><a href="/our-services.html">OUR SERVICES</a></li>
+          <li><a href="/get-in-touch.html" class="active">GET IN TOUCH</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1>Get In Touch Today</h1>
+        <p>We're here to guide you through your overseas education journey</p>
+      </div>
+    </section>
+
+    <section class="page-content">
+      <div class="container">
+        <div class="contact-options">
+          <!-- Option 1: Call Us -->
+          <div class="contact-option">
+            <div class="contact-option-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h3>Give Us A Buzz</h3>
+            <p>Can't decide where to study, UK or Ireland; which university or course, or have any other questions? Give us a buzz!</p>
+            <a href="tel:+919876543210" class="contact-number">+91 98765 43210</a>
+          </div>
+
+          <!-- Option 2: Social Media -->
+          <div class="contact-option">
+            <div class="contact-option-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <h3>Say Hi To Us</h3>
+            <p>On Facebook, Instagram or Email, say Hi to us anywhere. We are available for you, wherever you are. We're just a message away!</p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a href="mailto:info@xpatnestconsultancy.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="contact-grid">
+          <div class="contact-form-container">
+            <h2>Contact Us</h2>
+            <form class="contact-form" id="contact-form">
+              <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Mobile Number *</label>
+                <input type="tel" id="phone" name="phone" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="queries">Queries</label>
+                <textarea id="queries" name="queries" class="form-control" rows="5"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">CONTACT ME</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Head Office Section -->
+        <h3 class="offices-heading">Where To Find Us In The Real World</h3>
+
+        <div class="location-content">
+          <div class="location-info">
+            <h3>Delhi, Head Office</h3>
+            <address>
+              <strong>Xpatnest Consultancy</strong><br>
+              2/11, West Patel Nagar,<br>
+              Near Patel Nagar Metro Station<br>
+              New Delhi 110008
+            </address>
+
+            <div class="contact-details">
+              <h4>Phone</h4>
+              <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+
+              <h4>Email</h4>
+              <p><a href="mailto:info@xpatnestconsultancy.com">info@xpatnestconsultancy.com</a></p>
+            </div>
+          </div>
+          <div class="location-image">
+            <img src="https://ext.same-assets.com/3548793096/483732983.jpeg" alt="Delhi Office" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.571539958388!2d77.17105121550975!3d28.64473569112006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d02a203a0df2b%3A0xf5c4de6392db1e40!2sPatel%20Nagar%2C%20New%20Delhi%2C%20Delhi%20110008!5e0!3m2!1sen!2sin!4v1649846029777!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- Other Offices -->
+        <h3 class="offices-heading">Other Offices</h3>
+
+        <div class="location-tabs" role="tablist">
+          <button class="location-tab active" data-location="berlin" role="tab" aria-selected="true">Berlin</button>
+          <button class="location-tab" data-location="dhaka" role="tab" aria-selected="false">Dhaka</button>
+          <button class="location-tab" data-location="birgunj" role="tab" aria-selected="false">Birgunj</button>
+        </div>
+
+        <!-- Berlin Office -->
+        <div class="location-content location-panel active" id="berlin-panel" role="tabpanel">
+          <div class="location-info">
+            <h3>Berlin, Germany</h3>
+            <address>
+              <strong>Xpatnest Consultancy</strong><br>
+              Friedrichstraße 68,<br>
+              10117 Berlin,<br>
+              Germany
+            </address>
+
+            <div class="contact-details">
+              <h4>Phone</h4>
+              <p><a href="tel:+4930123456789">+49 30 123 456 789</a></p>
+
+              <h4>Email</h4>
+              <p><a href="mailto:berlin@xpatnestconsultancy.com">berlin@xpatnestconsultancy.com</a></p>
+            </div>
+          </div>
+          <div class="location-image">
+            <img src="https://ext.same-assets.com/289714813/428053152.jpeg" alt="Berlin Office" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Dhaka Office -->
+        <div class="location-content location-panel" id="dhaka-panel" role="tabpanel" style="display: none;">
+          <div class="location-info">
+            <h3>Dhaka, Bangladesh</h3>
+            <address>
+              <strong>Xpatnest Consultancy</strong><br>
+              House 41, Road 8,<br>
+              Dhanmondi, Dhaka 1205,<br>
+              Bangladesh
+            </address>
+
+            <div class="contact-details">
+              <h4>Phone</h4>
+              <p><a href="tel:+8801712345678">+880 1712 345678</a></p>
+
+              <h4>Email</h4>
+              <p><a href="mailto:dhaka@xpatnestconsultancy.com">dhaka@xpatnestconsultancy.com</a></p>
+            </div>
+          </div>
+          <div class="location-image">
+            <img src="https://ext.same-assets.com/904725520/324437193.jpeg" alt="Dhaka Office" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Birgunj Office -->
+        <div class="location-content location-panel" id="birgunj-panel" role="tabpanel" style="display: none;">
+          <div class="location-info">
+            <h3>Birgunj, Nepal</h3>
+            <address>
+              <strong>Xpatnest Consultancy</strong><br>
+              Adarshnagar, Main Road,<br>
+              Near City Mall,<br>
+              Birgunj 44300, Nepal
+            </address>
+
+            <div class="contact-details">
+              <h4>Phone</h4>
+              <p><a href="tel:+9771234567">+977 1234567</a></p>
+
+              <h4>Email</h4>
+              <p><a href="mailto:birgunj@xpatnestconsultancy.com">birgunj@xpatnestconsultancy.com</a></p>
+            </div>
+          </div>
+          <div class="location-image">
+            <img src="https://ext.same-assets.com/904725520/324437193.jpeg" alt="Birgunj Office" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <img src="uploads/logo_export.svg?v=2" alt="Xpatnest Consultancy Logo" class="footer-logo" width="150" height="47">
+          <p>Xpatnest Consultancy provides specialized education consulting services for students aspiring to study in Europe. With over 5 years of experience, we have helped over 1,000 students achieve their study abroad dreams.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/why-xpatnest.html">Why Xpatnest</a></li>
+            <li><a href="/our-services.html">Our Services</a></li>
+            <li><a href="/get-in-touch.html">Get In Touch</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <address>
+            123 Example Street<br>
+            New Delhi, 110001<br>
+            India
+          </address>
+          <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+          <p><a href="mailto:info@xpatnestconsultancy.com">info@xpatnestconsultancy.com</a></p>
+        </div>
+        <div class="footer-social">
+          <h3>Connect With Us</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Xpatnest Consultancy Pvt. Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Additional JS for location tabs -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const locationTabs = document.querySelectorAll('.location-tab');
+      const locationPanels = document.querySelectorAll('.location-panel');
+
+      locationTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          // Remove active class from all tabs
+          locationTabs.forEach(t => {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+
+          // Add active class to clicked tab
+          this.classList.add('active');
+          this.setAttribute('aria-selected', 'true');
+
+          // Hide all panels
+          locationPanels.forEach(panel => {
+            panel.style.display = 'none';
+          });
+
+          // Show the selected panel
+          const location = this.getAttribute('data-location');
+          const panel = document.getElementById(`${location}-panel`);
+          if (panel) {
+            panel.style.display = 'grid';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
